@@ -1,0 +1,35 @@
+<p>ngif works!</p>
+<button (click)="onClick()">add</button>
+<div *ngIf="isValid; then b else a"></div>
+<ng-template #b>
+    <div> added </div>
+</ng-template>
+<ng-template #a>
+    <div>not added yet</div>
+</ng-template>
+<div>
+    <select name="list" (change)="getValue($event)">
+        <option value="tv" name="tv">tv</option>
+        <option value="mobile" name="mobile">mobile</option>
+        <option value="laptop" name="laptop">laptop</option>
+    </select>
+</div>
+<div [ngSwitch]="selectedValue">
+    <div *ngSwitchCase="'tv'">tv</div>
+    <div  *ngSwitchCase="'mobile'">mobile</div>
+    <div  *ngSwitchCase="'laptop'">laptop</div>
+</div>
+<br><br>
+<div>
+    <div style="display: flex;padding: 10px;">
+        <div>product</div>
+        <div>price</div>
+    </div>
+    <div *ngFor="let a of arr" style="display: flex; padding: 10px;">
+        <div>{{a.pname}}</div>
+        <div>{{a.pprice}}</div>
+    </div>
+</div>
+<button class="btn btn-success">add</button>
+
+

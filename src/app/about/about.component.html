@@ -1,0 +1,47 @@
+<!-- <div >
+    about
+</div>
+<div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam, ullam nihil provident commodi vero culpa exercitationem quibusdam eveniet ipsum dolorem vitae!
+</div> --> 
+<div class="parent">
+
+    <h2>parent</h2>
+    <div class="row">
+    <div class="col-md-6 col-sm-6 col-lg-6 w-100% border-1 ">
+        <h2>User</h2>
+        <div class="d-flex gap-3 p-2">
+            <div>User Name:</div>
+            <div class="">Action</div>
+        </div>
+        <div class="d-flex gap-5 p-2" *ngFor="let user of users">
+            <div>{{user}}</div>
+         <div> <button class="btn btn-danger btn-sm">Remove</button></div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 w-100%">
+        <h2>Admin</h2>
+        <div class="d-flex gap-3">
+            <div>Admin Name:</div>
+            <div>Action</div>
+        </div>
+        <div class="d-flex gap-5" *ngFor="let admin of admins">
+            <div>{{admin}}</div>
+            <button class="btn btn-danger btn-sm">Remove</button>
+        </div>
+    </div>
+</div>
+    
+<hr>
+
+<div class="d-flex " style="background-color: rgb(141, 211, 211);">
+    <app-child (inputEvent)="pushUser($event)"></app-child>  
+
+
+    <app-child (inputEvent)="pushAdmins($event)"></app-child>
+</div>
+<!-- <div>{{date | date}}</div> -->
+<div>{{value | lowercase}}</div>
+<div class="col lg-4">
+    <app-c1></app-c1>
+</div>
